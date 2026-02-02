@@ -1,0 +1,165 @@
+2026-02-02 15:18:08,074 - DBManager - INFO - 数据库初始化完成
+2026-02-02 15:19:56,413 - DBManager - INFO - 数据库初始化完成
+2026-02-02 15:19:56,413 - STTEngine - INFO - STTEngine 初始化: model=base, device=cuda, compute=float16
+2026-02-02 15:19:57,995 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-02-02 15:19:58,014 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2026-02-02 15:19:59,709 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-02-02 15:21:00,522 - WebUI - INFO - 用户点击启动流水线
+2026-02-02 15:21:00,522 - Pipeline - INFO - === 启动自动化流水线 ===
+2026-02-02 15:21:00,522 - DBManager - INFO - 开始扫描目录: data/raw_video
+2026-02-02 15:21:05,643 - DBManager - INFO - 注册新视频文件: D:\Development\Python\Python_project\frxxz-idiom-extractor\data\raw_video\input.mp4
+2026-02-02 15:21:05,656 - AudioExtractor - INFO - 正在从视频提取音频: input.mp4
+2026-02-02 15:21:08,207 - AudioExtractor - INFO - 音频提取成功: D:\Development\Python\Python_project\frxxz-idiom-extractor\audio_cache\input.wav
+2026-02-02 15:21:08,216 - DBManager - INFO - 状态更新成功: input.mp4 -> audio_extracted
+2026-02-02 15:21:08,218 - STTEngine - INFO - 正在加载 WhisperX 模型: base...
+2026-02-02 15:21:14,570 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2026-02-02 15:21:14,570 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2026-02-02 15:21:14,570 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2026-02-02 15:21:14,572 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load
+2026-02-02 15:21:15,067 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-02-02 15:21:15,067 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-02-02 15:21:15,068 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _save
+2026-02-02 15:21:15,068 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _recover
+2026-02-02 15:22:00,872 - STTEngine - ERROR - WhisperX 模型加载失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:22:00,873 - Pipeline - ERROR - STT 步骤失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:22:00,888 - Pipeline - INFO - === 流水线任务结束 ===
+2026-02-02 15:24:35,402 - DBManager - INFO - 数据库初始化完成
+2026-02-02 15:24:35,402 - STTEngine - INFO - STTEngine 初始化: model=base, device=cuda, compute=float16
+2026-02-02 15:24:37,372 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-02-02 15:24:58,246 - DBManager - INFO - 数据库初始化完成
+2026-02-02 15:24:58,246 - STTEngine - INFO - STTEngine 初始化: model=base, device=cuda, compute=float16
+2026-02-02 15:24:59,604 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-02-02 15:24:59,624 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2026-02-02 15:25:00,359 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-02-02 15:25:13,400 - WebUI - INFO - 用户点击启动流水线
+2026-02-02 15:25:13,402 - Pipeline - INFO - === 启动自动化流水线 ===
+2026-02-02 15:25:13,402 - DBManager - INFO - 开始扫描目录: data/raw_video
+2026-02-02 15:25:17,487 - STTEngine - INFO - 正在加载 WhisperX 模型: base...
+2026-02-02 15:25:22,276 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2026-02-02 15:25:22,277 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2026-02-02 15:25:22,277 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2026-02-02 15:25:22,277 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load
+2026-02-02 15:25:22,823 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-02-02 15:25:22,823 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-02-02 15:25:22,824 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _save
+2026-02-02 15:25:22,824 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _recover
+2026-02-02 15:25:24,544 - STTEngine - ERROR - WhisperX 模型加载失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:25:24,544 - Pipeline - ERROR - STT 步骤失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:25:24,552 - Pipeline - INFO - === 流水线任务结束 ===
+2026-02-02 15:28:38,396 - DBManager - INFO - 数据库初始化完成
+2026-02-02 15:28:38,397 - STTEngine - INFO - STTEngine 初始化: model=base, device=cuda, compute=None
+2026-02-02 15:28:39,694 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-02-02 15:28:39,742 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2026-02-02 15:28:40,811 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-02-02 15:28:50,291 - WebUI - INFO - 用户点击启动流水线
+2026-02-02 15:28:50,293 - Pipeline - INFO - === 启动自动化流水线 ===
+2026-02-02 15:28:50,293 - DBManager - INFO - 开始扫描目录: data/raw_video
+2026-02-02 15:28:54,154 - STTEngine - INFO - 正在加载 WhisperX 模型: base...
+2026-02-02 15:28:58,787 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2026-02-02 15:28:58,787 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2026-02-02 15:28:58,789 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2026-02-02 15:28:58,789 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load
+2026-02-02 15:28:59,258 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-02-02 15:28:59,258 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-02-02 15:28:59,258 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _save
+2026-02-02 15:28:59,258 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _recover
+2026-02-02 15:29:01,080 - STTEngine - ERROR - WhisperX 模型加载失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:29:01,080 - Pipeline - ERROR - STT 步骤失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:29:01,089 - Pipeline - INFO - === 流水线任务结束 ===
+2026-02-02 15:30:40,486 - DBManager - INFO - 数据库初始化完成
+2026-02-02 15:30:40,487 - STTEngine - INFO - STTEngine 初始化: model=base, device=cuda, compute=None
+2026-02-02 15:30:41,847 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-02-02 15:30:41,863 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2026-02-02 15:30:42,914 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-02-02 15:31:04,494 - WebUI - INFO - 用户点击启动流水线
+2026-02-02 15:31:04,494 - Pipeline - INFO - === 启动自动化流水线 ===
+2026-02-02 15:31:04,494 - DBManager - INFO - 开始扫描目录: data/raw_video
+2026-02-02 15:31:08,340 - STTEngine - INFO - 正在加载 WhisperX 模型: base...
+2026-02-02 15:31:13,135 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _speechbrain_save
+2026-02-02 15:31:13,136 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _speechbrain_load
+2026-02-02 15:31:13,136 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2026-02-02 15:31:13,136 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load
+2026-02-02 15:31:13,615 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-02-02 15:31:13,617 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-02-02 15:31:13,617 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for _save
+2026-02-02 15:31:13,617 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for _recover
+2026-02-02 15:31:16,015 - STTEngine - ERROR - WhisperX 模型加载失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:31:16,015 - Pipeline - ERROR - STT 步骤失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 15:31:16,025 - Pipeline - INFO - === 流水线任务结束 ===
+2026-02-02 15:33:50,483 - DBManager - ERROR - 创建数据库失败: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2026-02-02 15:34:05,457 - DBManager - INFO - 数据库 frxxz_idiom 确认就绪
+2026-02-02 15:34:05,786 - DBManager - INFO - MySQL 表结构初始化完成
+2026-02-02 16:14:23,344 - WebUI - INFO - 用户点击启动流水线
+2026-02-02 16:14:23,345 - Pipeline - INFO - === 启动自动化流水线 ===
+2026-02-02 16:14:23,345 - DBManager - INFO - 开始扫描目录: data/raw_video
+2026-02-02 16:14:28,818 - STTEngine - INFO - 正在加载 WhisperX 模型: base...
+2026-02-02 16:14:31,191 - STTEngine - ERROR - WhisperX 模型加载失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 16:14:31,191 - Pipeline - ERROR - STT 步骤失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 16:14:31,201 - Pipeline - INFO - === 流水线任务结束 ===
+2026-02-02 19:31:39,557 - WebUI - INFO - 用户点击启动流水线
+2026-02-02 19:31:39,557 - Pipeline - INFO - === 启动自动化流水线 ===
+2026-02-02 19:31:39,557 - DBManager - INFO - 开始扫描目录: data/raw_video
+2026-02-02 19:31:44,788 - STTEngine - INFO - 正在加载 WhisperX 模型: base...
+2026-02-02 19:31:46,838 - STTEngine - ERROR - WhisperX 模型加载失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 19:31:46,838 - Pipeline - ERROR - STT 步骤失败: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.listconfig.ListConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([omegaconf.listconfig.ListConfig])` or the `torch.serialization.safe_globals([omegaconf.listconfig.ListConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-02-02 19:31:46,847 - Pipeline - INFO - === 流水线任务结束 ===
